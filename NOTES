@@ -1,0 +1,28 @@
+REMEMBERING PARAMETERS
+
+store - reducer, initialState: The reducer is mandatory. The store also contains the initial state
+  EXAMPLE:
+    import createStore from 'redux';
+    import reducer from './reducers'
+
+    const initialState = {
+      myState: "This is my initial state"
+    }
+
+    const store = createStore(reducer, initialState)
+---------------------------------------
+
+reducer - state, action : contains the state as well as an action. The reducer goes and grabs the initial state from the store, and also updates the store through the action commands.
+  EXAMPLE:
+    const reducer = (state, action) => state;
+---------------------------------------
+
+action - type, payload : The type tells the reducer how to identify which action it is, while the payload is what contains your requested new state data, or in other words the new state object
+  EXAMPLE:
+    const action = {
+      type: MY_NEW_STATE,
+      payload: {
+        newMessage: "This is my new message",
+        moreStuff: "Here you can have as many lines as you want"
+      }
+    }
