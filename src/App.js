@@ -1,24 +1,24 @@
 import React, { Component } from "react";
 import HelloWorld from "./HelloWorld";
 import { createStore } from 'redux';
-import reducer from './reducers';
+import reducer from './reducer';
 import "./App.css"
+import store from './store';
+import ButtonGroup from './ButtonGroup';
 
 const initialState = { tech: "Redux" };
 
 
-const store = createStore(reducer, initialState)
+
 
 class App extends Component {
 
   render() {
     return(
-      <div>
-        <HelloWorld tech={store.getState().tech} />
-        <button className="buttons">React</button>
-        <button className="buttons">Vue</button>
-        <button className="buttons">Angular</button>
-      </div>
+      [
+        <HelloWorld key={1} tech={store.getState().tech} />,
+        <ButtonGroup key={2} technologies={["React", "Vue", "Angular"]} />
+      ]
     );
   }
 }

@@ -26,3 +26,40 @@ action - type, payload : The type tells the reducer how to identify which action
         moreStuff: "Here you can have as many lines as you want"
       }
     }
+
+///////////////////////////////////////
+REACT ADVANCED
+
+New React Feature - Arrays instead of divs: So in the new react, you can wrap components inside an array as opposed to having to wrap them in a div or another element. But you need to make sure that you add a key attribute to each of the elements, and add commas since they're arrays.
+  EXAMPLE:
+    Regular Way:
+      const MyComponent = () => {
+        return(
+          <div>
+            <h1>Hello World</h1>
+            <p>This is my message to the world</p>
+          </div>
+        )
+      }
+
+    New Way:
+      const MyComponent = () => {
+        return(
+          [
+            <h1 key={1}>Hello World</h1>,
+            <p key={2}>This is my message to the world</p>
+          ]
+        )
+      }
+----------------------------------------------
+
+
+
+
+
+
+
+
+
+
+.
