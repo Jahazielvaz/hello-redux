@@ -1,3 +1,6 @@
+TUTORIAL SOURCE:
+https://medium.freecodecamp.org/understanding-redux-the-worlds-easiest-guide-to-beginning-redux-c695f45546f6
+
 REMEMBERING PARAMETERS
 
 store - reducer, initialState: The reducer is mandatory. The store also contains the initial state
@@ -28,9 +31,9 @@ action - type, payload : The type tells the reducer how to identify which action
     }
 
 ///////////////////////////////////////
-REACT ADVANCED
+                          REACT ADVANCED
 
-New React Feature - Arrays instead of divs: So in the new react, you can wrap components inside an array as opposed to having to wrap them in a div or another element. But you need to make sure that you add a key attribute to each of the elements, and add commas since they're arrays.
+NEW REACT FEATURE - ARRAYS INSTEAD OF ELEMENTS:  So in the new react, you can wrap components inside an array as opposed to having to wrap them in a div or another element. But you need to make sure that you add a key attribute to each of the elements, and add commas since they're arrays.
   EXAMPLE:
     Regular Way:
       const MyComponent = () => {
@@ -52,9 +55,30 @@ New React Feature - Arrays instead of divs: So in the new react, you can wrap co
         )
       }
 ----------------------------------------------
+PASSING AN OBJECT AS PROPS INSTEAD OF SPECIFYING PROPS IN A STATELESS COMPONENT:
+  I don't think this is a new feature, but basically you also have the option of passing in a property as an object instead of accessing through props dot notation.
+    EXAMPLE:
+      Old Way:
+        Stateful Component:
+          <MyCustomElement myProperty="Hello World"></MyCustomElement>
 
+        Stateless Component:
+          const MyCustomElement = (props) => {
+            return(
+              <div>{props.myProperty}</div>
+            )
+          }
 
+      New Way:
+        Stateful Component:
+          <MyCustomElement myProperty="Hello World"></MyCustomElement>
 
+        Stateless Component:
+          const MyCustomElement = ({myProperty}) => {
+            return(
+              <div>{myProperty}</div>
+            )
+          }
 
 
 
